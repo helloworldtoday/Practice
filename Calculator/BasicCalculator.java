@@ -20,7 +20,6 @@ public class BasicCalculator implements ActionListener{
 	private Button num0, num1, num2, num3, num4, num5, num6, num7, num8, num9;
 	private Button bAdd, bSub, bMul, bDiv, bPer, bSqrt, bFrac, bInt, bDot, 
 					bCE, equals, backspace, clear;
-//	private HashMap<Button, Integer> buttonMap;
 
 	BasicCalculator() {
 		f = new Frame("Calculator");
@@ -47,11 +46,6 @@ public class BasicCalculator implements ActionListener{
 		num6 = new Button("6"); num7 = new Button("7"); num8 = new Button("8");
 		num9 = new Button("9");
 		
-//		buttonMap.put(num0, 0); buttonMap.put(num1, 1); buttonMap.put(num2, 2);
-//		buttonMap.put(num3, 3); buttonMap.put(num4, 4); buttonMap.put(num5, 5);
-//		buttonMap.put(num6, 6); buttonMap.put(num7, 7); buttonMap.put(num8, 8);
-//		buttonMap.put(num9, 9);
-		
 		bAdd = new Button("+"); bSub = new Button("-"); 
 		bMul = new Button("x"); bDiv = new Button("/");
 		bPer = new Button("%"); bSqrt = new Button("sqrt");
@@ -64,8 +58,6 @@ public class BasicCalculator implements ActionListener{
 	public void launchFrame() {
 		setPanel();		
 
-		// ACTION LISTENERS
-//		addActionListener();
 		clear.addActionListener(this);
 		bCE.addActionListener(this);
 
@@ -104,17 +96,6 @@ public class BasicCalculator implements ActionListener{
 	public void actionPerformed(ActionEvent a){
 		try {
 			/* |-------- Handling Exceptions ---------| */
-			
-//			buttonMap.put(num0, 0); buttonMap.put(num1, 1); buttonMap.put(num2, 2);
-//			buttonMap.put(num3, 3); buttonMap.put(num4, 4); buttonMap.put(num5, 5);
-//			buttonMap.put(num6, 6); buttonMap.put(num7, 7); buttonMap.put(num8, 8);
-//			buttonMap.put(num9, 9);
-//
-//			if (buttonMap.containsKey((Button)a.getSource())) {
-//				value += buttonMap.get(a.getSource());
-//				tField.setText(value);
-//			}
-			
 			if (a.getSource() == num0) {
 				value += 0;
 			}
@@ -319,10 +300,6 @@ public class BasicCalculator implements ActionListener{
 		f.setMenuBar(menuBar);
 		f.pack();
 	}
-//	
-//	public void addActionListener() {
-//		
-//	}
 
 	public static void main (String args[]) {
 		BasicCalculator s = new BasicCalculator();
